@@ -6,10 +6,10 @@ import { BoothSection } from './_components/booth-main/booth-section';
 import { TabBooth } from './_components/booth-main/tab-booth';
 import { SearchBar } from './_components/booth-main/search-bar';
 import { BoothList } from './_components/booth-main/booth-list';
-import { BoothListParams } from '@/app/_common/interfaces/booth.interface';
+import { type BoothListParams } from '@/app/_common/interfaces/booth.interface';
 import {
   BoothListKey,
-  BoothListRecord,
+  type BoothListRecord,
   categories,
   days,
   sections,

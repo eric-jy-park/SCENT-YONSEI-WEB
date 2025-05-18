@@ -2,16 +2,27 @@
 const config = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: true,
+    project: './tsconfig.json',
+    ecmaVersion: 'latest',
+    sourceType: 'module',
   },
-  ignorePatterns: ['node_modules', 'dist', 'posture_mode/*'],
-  plugins: ['@typescript-eslint'],
+  ignorePatterns: [
+    'node_modules',
+    'dist',
+    'posture_mode/*',
+    '.next',
+    'next.config.ts',
+  ],
+  plugins: ['@typescript-eslint', 'react-hooks'],
   extends: [
     'next/core-web-vitals',
-    'plugin:@typescript-eslint/recommended-type-checked',
-    'plugin:@typescript-eslint/stylistic-type-checked',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
   ],
   rules: {
+    'react/react-in-jsx-scope': 'off',
+    'react/prop-types': 'off',
     '@typescript-eslint/array-type': 'off',
     '@typescript-eslint/consistent-type-definitions': 'off',
     '@typescript-eslint/consistent-type-imports': [
@@ -37,6 +48,11 @@ const config = {
       },
     ],
     '@typescript-eslint/no-unsafe-assignment': 'off',
+  },
+  settings: {
+    react: {
+      version: 'detect',
+    },
   },
 };
 module.exports = config;
