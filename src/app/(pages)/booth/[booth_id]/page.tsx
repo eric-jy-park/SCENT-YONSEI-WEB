@@ -5,11 +5,11 @@ import { ImgCarousel } from '../_components/booth-detail/img-carousel';
 import { BoothInfo } from '../_components/booth-detail/booth-info';
 import { BoothLocation } from '../_components/booth-detail/booth-location';
 import { MenuList } from '../_components/booth-detail/menu-list';
-import { getBoothDetail } from '@/app/_common/apis/booth.api';
+
 interface BoothDetailPageProps {
-  params: {
+  params: Promise<{
     booth_id: string;
-  };
+  }>;
 }
 export default async function BoothDetailPage({
   params,

@@ -1,4 +1,4 @@
-import TopBar from '@/app/_common/components/top-bar';
+import { TopBar } from '@/app/_common/components/top-bar';
 import { MAKERS_INFO } from '@/app/_common/constants/makers-info';
 import { MakersInfo } from '@/app/_common/interfaces/makers.interface';
 import LionLogo from '@/public/svg/lion-logo.svg';
