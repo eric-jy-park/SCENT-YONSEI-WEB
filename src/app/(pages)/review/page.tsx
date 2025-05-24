@@ -1,9 +1,10 @@
 import { TopBar } from '@/app/_common/components/top-bar';
-import { MAKERS_INFO } from '@/app/_common/constants/makers-info';
-import { MakersInfo } from '@/app/_common/interfaces/makers.interface';
+
 import LionLogo from '@/public/svg/lion-logo.svg';
 import LikelionBrandlogo from '@/public/svg/likelion-brandlogo.svg';
 import UnderBar from '@/app/_common/components/underbar';
+import Review from './_components/review';
+import Liked from './_components/liked';
 
 export default function ReviewPage() {
   return (
@@ -29,8 +30,8 @@ export default function ReviewPage() {
         </section>
 
         <div>
-          <p className='flex justify-center text-label-s text-white text-400 text-center'>
-            멋쟁이사자처럼이 올해 새롭게 대동제 웹사이트를 제작하였습니다.
+          <p className='pb-[72px] flex justify-center text-label-s text-white text-400 text-center'>
+            멋쟁이사자처럼이 올해 새롭게 대동제 웹사이트를 제작했습니다.
             <br />
             따뜻한 후기를 남겨주시면
             <br />
@@ -38,20 +39,15 @@ export default function ReviewPage() {
           </p>
         </div>
 
-        <div className='w-[280px] h-[185px] rounded-[20px] mt-[76px] bg-white'>
-          입력란
-        </div>
+        <Review />
+        <Liked />
 
-        <div className='pt-[30px] pb-[53px]'>
-          <button className='px-[16px] py-[10px] text-point text-[14px] leading-[24px] font-[700] rounded-[100px] border border-[#DFF4FF] bg-white shadow-[0_0_8px_0_rgba(27,165,225,0.5)]'>
-            제출하기
-          </button>
-        </div>
-
-        <div>
-          <button className='px-2 py-1 w-[99px] h-[68px] text-point text-[14px] leading-[24px] font-[700] rounded-[20px] border border-[#DFF4FF] bg-white shadow-[0_0_8px_0_rgba(27,165,225,0.5)]'>
-            응원하기
-          </button>
+        <div className='dancing-icon'>
+          <div className='hearts-animations'>
+            <div className='heart'> </div>
+            <div className='heart'> </div>
+            <div className='heart'> </div>
+          </div>
         </div>
       </main>
       <footer className='flex items-center justify-center'>
